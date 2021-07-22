@@ -2,7 +2,7 @@ import React from 'react'
 
 const RandomRecipe = () => {
     return (
-        <div>
+        <div  className="mainContainer">
             
         </div>
     )

@@ -2,3 +2,8 @@
     display: flex;
     flex-direction: row;
 }
+
+.current>p {
+    color: rgb(119, 73, 119);
+    font-weight: 700;
+}

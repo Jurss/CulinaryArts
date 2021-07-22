@@ -1,26 +1,35 @@
 import React from 'react';
 import './CSS/navigation.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import Menu from '../img/menu.svg';
+import Random from '../img/random.svg';
+import Nutriment from '../img/nutriments.svg';
+import Bulbe from '../img/bulbe.svg'
 
 const Navigation = () => {
     return (
         <div className="navContainer">
             <div className="nameContainer">
-                <h1 className="name">CulinaryArts</h1>
+                <h2 className="name1">Culinary</h2>
+                <h2 className="name2">Arts</h2>
             </div>
             <div className="navList">
-                <Link to='/'>
-                    <h3>Recipe</h3>
-                </Link>
-                <Link to='/randomrecipe'>
-                    <h3>Random Recipe</h3>
-                </Link>
-                <Link to='/ingredients'>
-                    <h3>By Ingredients</h3>
-                </Link>
-                <Link to='/nutriments'>
-                    <h3>By nutriments</h3>
-                </Link>
+                <NavLink exact activeClassName="current" className='navItem' to='/'>
+                    <img src={Menu} alt="menu icone" />
+                    <p>Recipe</p>
+                </NavLink>
+                <NavLink exact activeClassName="current" className='navItem' to='/randomrecipe'>
+                    <img src={Random} alt="random icone" />
+                    <p>Random Recipe</p>
+                </NavLink>
+                <NavLink exact activeClassName="current" className='navItem' to='/ingredients'>
+                    <img src={Bulbe} alt="harvest icone" />
+                    <p>By Ingredients</p>
+                </NavLink>
+                <NavLink exact activeClassName="current" className='navItem' to='/nutriments'>
+                    <img src={Nutriment} alt="nutriment icone" />
+                    <p>By nutriments</p>
+                </NavLink>
             </div>
         </div>
     )

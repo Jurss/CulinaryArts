@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './CSS/ingredients.css';
 
 const Ingredients = () => {
     return (
-        <div>
+        <div className="mainContainer">
             <h3>Ingredients</h3>
         </div>
     )

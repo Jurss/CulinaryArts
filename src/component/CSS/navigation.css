@@ -7,3 +7,43 @@
     width: 20vw;
     height: 100vh;
 }
+
+.nameContainer {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-top: 15%;
+    font-size: 1.9rem;
+}
+
+.name1 {
+    color: rgb(119, 73, 119);
+}
+
+.name2 {
+    color: rgb(247, 135, 44);
+}
+
+.navItem {
+    color: grey;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10%;
+    margin-top: 10%;
+    font-size: 1.7rem;
+}
+
+.navItem>p {
+    margin-left: 16px;
+}
+
+.navList>a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.navItem>img {
+    max-height: 1.7rem;
+    max-width: 1.7rem;
+}
