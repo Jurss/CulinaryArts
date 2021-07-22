@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+}
+
+.mainErrorContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: rgb(119, 73, 119);
+}
+
+h2 {
+    color: rgb(247, 135, 44);
+}
+
+.mainContainer>img {
+    margin-top: 50px;
+}
