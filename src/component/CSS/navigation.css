@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+}
+
+.navContainer {
+    background: #fff;
+    width: 20vw;
+    height: 100vh;
+}
