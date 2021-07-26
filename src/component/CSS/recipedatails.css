@@ -1,0 +1,14 @@
+.img {
+    height: 80px;
+    width: 80px;
+}
+
+.recipeDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    justify-self: center;
+    align-self: center;
+}

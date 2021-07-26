@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
+.joke {
+    background: #FB9400;
+    color: white;
+    width: 50%;
+    height: 8rem;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Baloo Chettan 2', cursive;
+    margin-left: 5%;
+    margin-top: 7%;
+    margin-bottom: 45px;
+}
+
+.joke>h2 {
+    margin-left: 5%;
+    color: white;
+    font-size: 24px;
+}
+
+.joke>p {
+    font-size: 20px;
+    margin-top: 2%;
+    margin-left: 5%;
+}
