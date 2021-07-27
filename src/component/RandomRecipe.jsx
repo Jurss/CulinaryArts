@@ -5,7 +5,8 @@ import './CSS/RanomRecipe.css';
 
 const RandomRecipe = () => {
 
-    const apiKey = '777a242ba0684136ba5af8b964599a11';
+    //const apiKey = '777a242ba0684136ba5af8b964599a11';
+    const apiKey = 'eb4f9cbd69184fefaf91e11d2a0e2814';
     const [results, setResults] = useState([]);
 
     const getRandomRecipe = () => {
@@ -16,7 +17,6 @@ const RandomRecipe = () => {
     if(results.length === 0){
         getRandomRecipe();
     }
-    console.log(results);
     return (
         <div  className="mainRandomContainer">
             <div className="randomTitle">
@@ -25,7 +25,7 @@ const RandomRecipe = () => {
             <div className="randomCardContainer">
                 {results.map((result) => {
                     return(
-                    <div className="randomCardSep">
+                    <div className="randomCardSep" key={result.spoonacularScore}>
                         <div className="randomCard">
                             <img className="randomImg" src={result.image} alt="product" />
                             <h3>{result.title}</h3>
@@ -35,7 +35,7 @@ const RandomRecipe = () => {
                                 <ul className="resultIngredients">
                                     {result.extendedIngredients.slice(0, 5).map((resultI) => {
                                         return(
-                                            <li>{resultI.nameClean}</li>
+                                            <li key={resultI.id}>{resultI.nameClean}</li>
                                         )
                                     })}
                                     <li>And more</li>

@@ -27,6 +27,7 @@
 .randomCard {
     background: #FFFFFF;
     margin-left: 5%;
+    margin-top: 15px;
     display: flex;
     flex-direction: row;
     justify-content: center;

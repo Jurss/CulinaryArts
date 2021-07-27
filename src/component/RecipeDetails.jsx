@@ -4,7 +4,8 @@ import './CSS/recipedatails.css'
 import { useState } from 'react';
 
 const RecipeDetails = ({title, id}) => {
-    const apiKey = '777a242ba0684136ba5af8b964599a11';
+    //const apiKey = '777a242ba0684136ba5af8b964599a11';
+    const apiKey = 'eb4f9cbd69184fefaf91e11d2a0e2814';
     const [ingredient, setIngredients] = useState([]);
     const [instructions, setInstructions] = useState([]);
 
@@ -26,9 +27,9 @@ const RecipeDetails = ({title, id}) => {
         getInstructions();
         getIngredients();
     }
-    if(ingredient.length === 0){
-        recipeDetails()
-    }
+    // if(ingredient.length === 0){
+    //     recipeDetails()
+    // }
 
     return ( 
         <div>
