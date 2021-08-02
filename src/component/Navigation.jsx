@@ -5,6 +5,7 @@ import Menu from '../img/menu.svg';
 import Random from '../img/random.svg';
 import Nutriment from '../img/nutriments.svg';
 import Bulbe from '../img/bulbe.svg'
+import Fork from '../img/fork.png';
 
 const Navigation = () => {
     return (
@@ -31,6 +32,7 @@ const Navigation = () => {
                     <p>By nutriments</p>
                 </NavLink>
             </div>
+            <img className="fork" src={Fork} alt="fork" />
         </div>
     )
 };

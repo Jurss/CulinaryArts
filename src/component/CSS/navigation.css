@@ -6,6 +6,7 @@
     background: #fff;
     width: 20vw;
     height: 100vh;
+    position: sticky;
 }
 
 .nameContainer {
@@ -46,4 +47,28 @@
 .navItem>img {
     max-height: 1.7rem;
     max-width: 1.7rem;
+}
+
+.fork {
+    position: absolute;
+    bottom: 0;
+    max-height: 400px;
+}
+
+@media screen and (max-height: 735px) {
+    .fork {
+        max-height: 300px;
+    }
+}
+
+@media screen and (max-height: 655px) {
+    .fork {
+        max-height: 200px;
+    }
+}
+
+@media screen and (max-height: 575px) {
+    .fork {
+        display: none;
+    }
 }

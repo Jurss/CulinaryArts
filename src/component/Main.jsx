@@ -36,8 +36,8 @@ const Main = () => {
             </div>
             
             <div className={clickedSearch ? 'home' : 'hidden'}>
-                {/* <Joke />
-                <RandomRecipe /> */}
+                <Joke />
+                <RandomRecipe />
             </div>
             {
                 results.length !== 0 &&

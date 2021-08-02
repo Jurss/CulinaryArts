@@ -4,13 +4,19 @@
 }
 
 .mainRandomContainer {
-    margin-left: 5%;
     height: auto;
     width: 75%;
     font-family: 'Baloo Chettan 2', cursive;
+    background: #F8F8FA;
+}
+
+.randomTitle {
+    margin-left: 5%;
+    margin-top: 2rem;
 }
 
 .randomCardContainer {
+    margin-left: 5%;
     height: auto;
     display: flex;
     flex-direction: row;
