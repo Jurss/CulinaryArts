@@ -6,7 +6,10 @@ import './CSS/RanomRecipe.css';
 const RandomRecipe = () => {
 
     //const apiKey = '777a242ba0684136ba5af8b964599a11';
-    const apiKey = 'eb4f9cbd69184fefaf91e11d2a0e2814';
+    //const apiKey = 'eb4f9cbd69184fefaf91e11d2a0e2814';
+    const apiKey = 'fc143844671c4e7dbfd946ac2398da37';
+    //const apiKey = '4ff1faa944a14d389e56ccb9ef80f238';
+    //const apiKey = '394d4e2e504b4f9699e2a95aaa339b66';
     const [results, setResults] = useState([]);
 
     const getRandomRecipe = () => {
@@ -35,7 +38,7 @@ const RandomRecipe = () => {
                                 <ul className="resultIngredients">
                                     {result.extendedIngredients.slice(0, 5).map((resultI) => {
                                         return(
-                                            <li key={resultI.id}>{resultI.nameClean}</li>
+                                            <li key={resultI.id}><img className="imgIngredients" src={'https://spoonacular.com/cdn/ingredients_100x100/'+resultI.image} alt="ingredient" /></li>
                                         )
                                     })}
                                     <li>And more</li>

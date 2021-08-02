@@ -1,4 +1,4 @@
-.ingredientsCardContainer {
+.equipementCardContainer {
     margin-top: 35px;
     margin-bottom: 45px;
     width: 50%;
@@ -6,9 +6,10 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    cursor: pointer;
 }
 
-.ingredientsCard {
+.equipementCard {
     box-shadow: 1px 2px 9px 0 rgba(0, 0, 0, 0.12);
     border-radius: 18px;
     width: 25%;

@@ -3,8 +3,8 @@ import Navigation from "./component/Navigation";
 import './app.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import RandomRecipe from "./component/RandomRecipe";
-import Ingredients from "./component/Ingredients";
-import Nutriments from "./component/Nutriments";
+import Ingredients from "./component/ByIngredients";
+import Nutriments from "./component/ByNutriments";
 import ErrorPage from "./ErrorPage";
 
 function App() {

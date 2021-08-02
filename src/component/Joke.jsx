@@ -5,6 +5,7 @@ import './CSS/joke.css';
 
 const Joke = () => {
     const apiKey = '777a242ba0684136ba5af8b964599a11';
+    //const apiKey = 'eb4f9cbd69184fefaf91e11d2a0e2814';
     const [joke, setJoke] = useState([]);
 
     function getJoke(){

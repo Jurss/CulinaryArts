@@ -88,3 +88,9 @@
     margin-bottom: 15px;
     cursor: pointer;
 }
+
+.imgIngredients {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}

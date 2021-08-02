@@ -1,0 +1,16 @@
+.stepContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stepsCardContainer {
+    width: 80%;
+    margin-bottom: 45px;
+}
+
+.stepsCard {
+    width: 80%;
+    margin-top: 10px;
+}
