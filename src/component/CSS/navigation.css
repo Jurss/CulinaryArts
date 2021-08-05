@@ -50,9 +50,13 @@
 }
 
 .fork {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     max-height: 400px;
+}
+
+.test {
+    position: fixed;
 }
 
 @media screen and (max-height: 735px) {

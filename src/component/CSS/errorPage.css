@@ -3,6 +3,8 @@
 }
 
 .mainErrorContainer {
+    width: 100%;
+    background: #F8F8FA;
     display: flex;
     flex-direction: column;
     justify-content: center;

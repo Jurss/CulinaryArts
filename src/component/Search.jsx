@@ -1,12 +1,15 @@
+
 import React, {useState} from 'react';
 import RecipeDetails from './RecipeDetails';
 
 const Search = ({ results }) => {
 
+
     const [idToChild, setIdToChild] = useState('');
     const [titleToChild, setTitleToChild] = useState('');
     const [clickedCard, setClickedCard] = useState(false);
     const [imgToChild, setImgToChild] = useState('');
+
 
     function handleCard(title, id, img){
         setTitleToChild(title);
