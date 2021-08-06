@@ -94,3 +94,14 @@ li {
 .desactiveContenu {
     display: none;
 }
+
+.similarCardContainer {
+    background: #FFFFFF;
+    width: 80%;
+    margin: 55px auto;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

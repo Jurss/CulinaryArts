@@ -1,20 +1,16 @@
 import React from 'react';
 import axios from 'axios';
+import {API_KEY} from '../constantes';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import './CSS/RanomRecipe.css';
 
 const RandomRecipe = () => {
 
-    //const apiKey = '777a242ba0684136ba5af8b964599a11';
-    //const apiKey = 'eb4f9cbd69184fefaf91e11d2a0e2814';
-    //const apiKey = 'fc143844671c4e7dbfd946ac2398da37';
-    //const apiKey = '4ff1faa944a14d389e56ccb9ef80f238';
-    const apiKey = '394d4e2e504b4f9699e2a95aaa339b66';
     const [results, setResults] = useState([]);
 
     const getRandomRecipe = () => {
-        axios.get('https://api.spoonacular.com/recipes/random?number=2&apiKey='+ apiKey).then((response) => {
+        axios.get('https://api.spoonacular.com/recipes/random?number=2&apiKey='+ API_KEY).then((response) => {
             setResults(response.data.recipes)
         })
     }

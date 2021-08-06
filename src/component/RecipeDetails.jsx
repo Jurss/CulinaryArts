@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import {API_KEY} from '../constantes';
 import { useState } from 'react';
 import './CSS/recipeDetails.css';
 import { useEffect } from 'react';
@@ -10,11 +11,6 @@ import Ingredients from './Ingredients';
 import Instructions from './Instructions';
 
 const RecipeDetails = ({title, id, img}) => {
-    //const apiKey = '777a242ba0684136ba5af8b964599a11';
-    //const apiKey = 'eb4f9cbd69184fefaf91e11d2a0e2814';
-    //const apiKey = 'fc143844671c4e7dbfd946ac2398da37';
-    //const apiKey = '4ff1faa944a14d389e56ccb9ef80f238';
-    const apiKey = '394d4e2e504b4f9699e2a95aaa339b66';
 
     const [servings, setServings] = useState([]);
     const [readyIn, setReadyIn] = useState('');
@@ -25,7 +21,7 @@ const RecipeDetails = ({title, id, img}) => {
     };
 
     function getInformations(){
-        const url = 'https://api.spoonacular.com/recipes/'+id+'/information?apiKey='+apiKey;
+        const url = 'https://api.spoonacular.com/recipes/'+id+'/information?apiKey='+API_KEY;
         axios.get(url).then((response2) => {
             setServings(response2.data.servings);
             setReadyIn(response2.data.readyInMinutes);
@@ -39,8 +35,6 @@ const RecipeDetails = ({title, id, img}) => {
         return <div></div>
     }
     CallApi();
-
-
     return ( 
         <div className="mainRecipeDetailsContainer">
             <div className="recipeDetails">
