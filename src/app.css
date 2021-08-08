@@ -1,6 +1,7 @@
 .appContainer {
     display: flex;
     flex-direction: row;
+    background: rgb(243, 243, 243);
 }
 
 .current>p {

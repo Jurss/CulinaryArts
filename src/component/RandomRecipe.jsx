@@ -1,13 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import axios from 'axios';
 import {API_KEY} from '../constantes';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import './CSS/RanomRecipe.css';
+import Search from './Search';
+import RecipeDetails from './RecipeDetails';
 
 const RandomRecipe = () => {
 
     const [results, setResults] = useState([]);
+    const [viewRecipe, setViewRecipe] = useState(false);
 
     const getRandomRecipe = () => {
         axios.get('https://api.spoonacular.com/recipes/random?number=2&apiKey='+ API_KEY).then((response) => {
@@ -17,6 +20,8 @@ const RandomRecipe = () => {
     if(results.length === 0){
         getRandomRecipe();
     }
+
+
     return (
         <div  className="mainRandomContainer">
             <div className="randomTitle">
@@ -45,6 +50,7 @@ const RandomRecipe = () => {
                     </div>
                     )
                 })}
+
             </div>
         </div>
     )

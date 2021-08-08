@@ -9,7 +9,7 @@ import Fork from '../img/fork.png';
 
 const Navigation = () => {
     return (
-        <>
+        <div>
         <div className="navContainer">
             <div className="test">
                 <div className="nameContainer">
@@ -37,7 +37,7 @@ const Navigation = () => {
             </div>
         </div>
         <img className="fork" src={Fork} alt="fork" />
-        </>
+        </div>
     )
 };
 

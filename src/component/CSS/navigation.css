@@ -5,8 +5,7 @@
 .navContainer {
     background: #fff;
     width: 20vw;
-    height: 100vh;
-    position: sticky;
+    height: 100%;
 }
 
 .nameContainer {

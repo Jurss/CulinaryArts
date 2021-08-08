@@ -5,7 +5,7 @@
 
 .mainRandomContainer {
     height: auto;
-    width: 75%;
+    width: 100%;
     font-family: 'Baloo Chettan 2', cursive;
     background: #F8F8FA;
 }
@@ -17,14 +17,17 @@
 
 .randomCardContainer {
     margin-left: 5%;
+    margin-right: 5%;
     height: auto;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     margin-top: 35px;
 }
 
 .randomCardSep {
+    margin-top: 25px;
     background: #FFFFFF;
     border-radius: 24px;
     margin-left: 5%;

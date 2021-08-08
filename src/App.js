@@ -7,19 +7,22 @@ import Ingredients from "./component/ByIngredients";
 import Nutriments from "./component/ByNutriments";
 import ErrorPage from "./ErrorPage";
 import Search from "./component/Search";
+import SearchQuery from "./component/SearchQuery";
+import RecipeDetails from "./component/RecipeDetails";
 
 function App() {
   return (
     <div className="appContainer">
-      <Router >
-        <Navigation />
+      <Router forceRefresh={true}>
+        <Navigation/>
         <Switch>
           <Route path='/' exact component={Main} />
+          <Route path='/:query' component={Search} />
           <Route path='/randomrecipe' exact component={RandomRecipe} />
           <Route path='/ingredients' exact component={Ingredients} />
           <Route path='/nutriments' exact component={Nutriments} />
           <Route path='/' component={ErrorPage} />
-          <Route path='/search' exact component={Search} />
+
         </Switch>
       </Router>
     </div>

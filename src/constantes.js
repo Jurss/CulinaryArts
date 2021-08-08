@@ -11,4 +11,4 @@ const arrKey = [
 
 
 
-export let API_KEY = arrKey[0];
+export let API_KEY = arrKey[2];
