@@ -25,7 +25,7 @@ const Navigation = () => {
                         <img src={Random} alt="random icone" />
                         <p>Random Recipe</p>
                     </NavLink>
-                    <NavLink exact activeClassName="current" className='navItem' to='/ingredients'>
+                    <NavLink exact activeClassName="current" className='navItem' to='/byIngredients'>
                         <img src={Bulbe} alt="harvest icone" />
                         <p>By Ingredients</p>
                     </NavLink>

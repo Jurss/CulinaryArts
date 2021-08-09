@@ -1,0 +1,18 @@
+.mainresultIngredients {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cardIngredients {
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 350px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

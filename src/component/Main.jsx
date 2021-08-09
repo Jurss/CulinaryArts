@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './CSS/main.css';
 import Joke from './Joke';
 import RandomRecipe from './RandomRecipe';

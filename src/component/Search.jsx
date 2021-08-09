@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import RecipeDetails from './RecipeDetails';
 import axios from 'axios';
 import {API_KEY} from '../constantes';
 import './CSS/search.css';
@@ -9,12 +8,6 @@ import SearchQuery from './SearchQuery';
 import './CSS/search.css';
 
 const Search = ({match}) => {
-
-
-    const [idToChild, setIdToChild] = useState('');
-    const [titleToChild, setTitleToChild] = useState('');
-    const [clickedCard, setClickedCard] = useState(false);
-    const [imgToChild, setImgToChild] = useState('');
     const [results, setResult] = useState([]);
 
     const handleSubmit = () => {
@@ -28,14 +21,6 @@ const Search = ({match}) => {
         handleSubmit();
     }, [])
 
-
-    function handleCard(title, id, img){
-        setTitleToChild(title);
-        setIdToChild(id);
-        setImgToChild(img)
-        setClickedCard(!clickedCard);
-    }
-
     return (
         <div className="searchContainer">
             <SearchQuery />
@@ -44,7 +29,7 @@ const Search = ({match}) => {
                 return(
                         <div className='card'>
                             <Link to={`/RecipeDetails/${result.id}`}>
-                                <div onClick={() => setClickedCard(true)}>
+                                <div>
                                     <h2>{result.title}</h2>
                                     <img className="imgCard" src={result.image} alt="recipe" />
                                 </div>

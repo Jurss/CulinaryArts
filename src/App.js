@@ -6,9 +6,9 @@ import RandomRecipe from "./component/RandomRecipe";
 import Nutriments from "./component/ByNutriments";
 import ErrorPage from "./ErrorPage";
 import Search from "./component/Search";
-import ByIngredient from "./component/ByIngredient";
-import SearchQuery from "./component/SearchQuery";
+import ByIngredients from "./component/ByIngredient";
 import RecipeDetails from "./component/RecipeDetails";
+import ByIngredientsSearch from "./component/ByIngredientsSearch";
 
 function App() {
   return (
@@ -19,8 +19,14 @@ function App() {
           <Route path='/' exact component={Main} />
           <Route path='/search/:query' component={Search} />
           <Route path='/RecipeDetails/:recipe' component={RecipeDetails} />
+
           <Route path='/randomrecipe' exact component={RandomRecipe} />
-          <Route path='/byingredients' component={ByIngredient} />
+
+          <Route path='/byIngredients' exact component={ByIngredients} />
+          <Route path='/ByIngredientsSearch/:search' component={ByIngredientsSearch} />
+          <Route path='/ByIngredientsResult/:recipe' component={RecipeDetails} />
+          
+
           <Route path='/nutriments' exact component={Nutriments} />
           <Route path='/' component={ErrorPage} />
         </Switch>
