@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Nutriments = () => {
     return (
@@ -6,6 +6,6 @@ const Nutriments = () => {
             
         </div>
     )
-}
+};
 
-export default Nutriments
+export default Nutriments;

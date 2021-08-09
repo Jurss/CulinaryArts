@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import RecipeDetails from './RecipeDetails';
 import axios from 'axios';
 import {API_KEY} from '../constantes';
@@ -15,7 +16,6 @@ const Search = ({match}) => {
     const [clickedCard, setClickedCard] = useState(false);
     const [imgToChild, setImgToChild] = useState('');
     const [results, setResult] = useState([]);
-console.log(match.params.query)
 
     const handleSubmit = () => {
         setResult([])
@@ -42,17 +42,16 @@ console.log(match.params.query)
             <div className="cardContainer">
             {results.map((result) => {
                 return(
-                    <button className={clickedCard ? "hidden" :"card"} onClick={() => handleCard(result.title, result.id, result.image)}  key={result.id}>
-                        <div onClick={() => setClickedCard(true)}>
-                            <h2>{result.title}</h2>
-                            <img className="imgCard" src={result.image} alt="recipe" />
+                        <div className='card'>
+                            <Link to={`/RecipeDetails/${result.id}`}>
+                                <div onClick={() => setClickedCard(true)}>
+                                    <h2>{result.title}</h2>
+                                    <img className="imgCard" src={result.image} alt="recipe" />
+                                </div>
+                            </Link>
                         </div>
-                    </button>
                 )
             })}
-                {clickedCard === true &&
-                    <RecipeDetails id={idToChild} title={titleToChild} img={imgToChild}/>
-                }
         </div>
     </div>
     )

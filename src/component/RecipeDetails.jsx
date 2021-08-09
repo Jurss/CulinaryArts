@@ -10,10 +10,11 @@ import Equipement from './Equipement';
 import Ingredients from './Ingredients';
 import Instructions from './Instructions';
 
-const RecipeDetails = ({title, id, img}) => {
-
+const RecipeDetails = ({match}) => {
     const [servings, setServings] = useState([]);
     const [readyIn, setReadyIn] = useState('');
+    const [title, setTitle] = useState([]);
+    const [img, setImg] = useState('');
     const [toggleTabs, setToggleTabs] = useState(1);
 
     const toggleTab = (i) =>{
@@ -21,10 +22,12 @@ const RecipeDetails = ({title, id, img}) => {
     };
 
     function getInformations(){
-        const url = 'https://api.spoonacular.com/recipes/'+id+'/information?apiKey='+API_KEY;
+        const url = 'https://api.spoonacular.com/recipes/'+match.params.recipe+'/information?apiKey='+API_KEY;
         axios.get(url).then((response2) => {
             setServings(response2.data.servings);
             setReadyIn(response2.data.readyInMinutes);
+            setTitle(response2.data.title);
+            setImg(response2.data.image);
         })
     }
 
@@ -55,13 +58,13 @@ const RecipeDetails = ({title, id, img}) => {
                     <li className={toggleTabs === 2 ? 'activeTabs' : 'tabs'} onClick={() => toggleTab(2)}>Equipement</li>
                 </div>
                 <div className={toggleTabs === 1 ? 'ingredientsCardContainer activeContenu' : 'desactiveContenu'}>         
-                    <Ingredients id={id} />
+                    <Ingredients id={match.params.recipe} />
                 </div>
                 <div className={toggleTabs === 2 ? 'equipementCardContainer activeContenu' : 'desactiveContenu'}>
-                    <Equipement id={id} />
+                    <Equipement id={match.params.recipe} />
                 </div>
                 <div className="stepContainer">
-                    <Instructions id={id} />
+                    <Instructions id={match.params.recipe} />
                 </div>
             </div>
         </div>

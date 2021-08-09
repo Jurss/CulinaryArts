@@ -12,12 +12,12 @@ const SearchQuery = () => {
     };
 
     return (
-    <div className="form">
-        <input className="inputForm" onChange={handleChange} type="text" placeholder="Search"/>
-        <Link to={`/${query}`}>
-            <button className="buttonForm" id="myBtn" type="submit"><img className="loupe" src={Loupe} alt="" /></button>
-        </Link>
-    </div>
+        <div className="form">
+            <input className="inputForm" onChange={handleChange} type="text" placeholder="Search"/>
+            <Link to={`/search/${query}`}>
+                <button className="buttonForm" id="myBtn" type="submit"><img className="loupe" src={Loupe} alt="" /></button>
+            </Link>
+        </div> 
     )
 };
 
