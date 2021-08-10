@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import {API_KEY} from '../constantes';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
@@ -10,7 +11,7 @@ const RandomRecipe = () => {
     const [results, setResults] = useState([]);
 
     const getRandomRecipe = () => {
-        axios.get('https://api.spoonacular.com/recipes/random?number=2&apiKey='+ API_KEY).then((response) => {
+        axios.get('https://api.spoonacular.com/recipes/random?number=10&apiKey='+ API_KEY).then((response) => {
             setResults(response.data.recipes)
         })
     }
@@ -43,7 +44,9 @@ const RandomRecipe = () => {
                                     <li>And more</li>
                                 </ul>
                         </div>
-                        <button className="viewRecipe">View Recipe</button>
+                        <Link to={`/randomrecipe/${result.id}`}>
+                            <button className="viewRecipe">View Recipe</button>
+                        </Link>
                     </div>
                     )
                 })}

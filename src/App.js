@@ -21,6 +21,7 @@ function App() {
           <Route path='/RecipeDetails/:recipe' component={RecipeDetails} />
 
           <Route path='/randomrecipe' exact component={RandomRecipe} />
+          <Route path='/randomrecipe/:recipe' exact component={RecipeDetails} />
 
           <Route path='/byIngredients' exact component={ByIngredients} />
           <Route path='/ByIngredientsSearch/:search' component={ByIngredientsSearch} />

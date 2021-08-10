@@ -60,7 +60,7 @@
 }
 
 .resultIngredients {
-    width: 70%;
+    width: 70% !important;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
