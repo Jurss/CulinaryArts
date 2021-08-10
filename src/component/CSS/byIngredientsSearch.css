@@ -2,6 +2,28 @@
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 5%;
+    height: 100%;
+}
+
+.empty {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 5%;
+}
+
+.resultIngredients {
+    margin-top: 55px;
+    width: 100%;
+}
+
+.mainCardIngredients {
+    width: 33%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .cardIngredients {
@@ -15,4 +37,9 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.searchNotFound {
+    margin-top: 25px;
+    margin-left: 25px;
 }

@@ -1,6 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import './CSS/byIngredients.css';
+import add from '../img/add.png';
+import loupe from '../img/loupe.svg';
+import remove from '../img/remove.png';
 
 const ByIngredients = () => {
     const [fields, setFields] = useState([{ value: null }]);
@@ -36,31 +39,35 @@ const ByIngredients = () => {
     useEffect(() => {
         concatFields()
     },[fields])
-    console.log(concat)
+
     return (
         <div className='mainContainer'>
-            <h1 className='title'>search for a recipe with the ingredients you have</h1>
-            <div>
+            <h1 className='title'>What ingredients do you have ?</h1>
+            <div className='searchConatiner'>
                 <h3>Add Ingredients</h3>
                 {fields.map((field, idx) => {
                     return (
-                    <div key={`${field}-${idx}`}>
+                    <div className='searchCard' key={`${field}-${idx}`}>
                         <input
                         type="text"
-                        placeholder="Enter text"
+                        placeholder="Ingredients"
                         onChange={e => handleChange(idx, e)}
                         />
                         <button type="button" onClick={() => handleRemove(idx)}>
-                        X
+                        <img className='removeBtn' src={remove} alt="remove" />
                         </button>
                     </div>
                     );
                 })}
-                <button type="button" onClick={() => handleAdd()}>
-                    +
-                </button>
+                <div className="addBtnContainer">
+                    <button  type="button" onClick={() => handleAdd()}>
+                        <img className='addBtn' src={add} alt="add" />
+                    </button>
+                    <Link to={`/ByIngredientsSearch/${concat}`}><img className='loupe' src={loupe} alt="loupe" /></Link>
+                </div>
+                <div className='searchBtn'>
+                </div>
                 
-                <Link to={`/ByIngredientsSearch/${concat}`}>OK</Link>
             </div>
         </div>
     )
