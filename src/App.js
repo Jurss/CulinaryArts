@@ -9,6 +9,7 @@ import Search from "./component/Search";
 import ByIngredients from "./component/ByIngredient";
 import RecipeDetails from "./component/RecipeDetails";
 import ByIngredientsSearch from "./component/ByIngredientsSearch";
+import ByNutrimentsSearch from "./component/ByNutrimentsSearch";
 
 function App() {
   return (
@@ -24,11 +25,11 @@ function App() {
           <Route path='/randomrecipe/:recipe' exact component={RecipeDetails} />
 
           <Route path='/byIngredients' exact component={ByIngredients} />
-          <Route path='/ByIngredientsSearch/:search' component={ByIngredientsSearch} />
-          <Route path='/ByIngredientsResult/:recipe' component={RecipeDetails} />
+          <Route path='/ByIngredients/search/:search' component={ByIngredientsSearch} />
           
 
           <Route path='/nutriments' exact component={Nutriments} />
+          <Route path='/nutriments/search/:label/:min/:max' exact component={ByNutrimentsSearch} />
           <Route path='/' component={ErrorPage} />
         </Switch>
       </Router>

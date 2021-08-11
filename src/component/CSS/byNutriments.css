@@ -1,0 +1,11 @@
+.selectValue {
+    display: flex;
+}
+
+.selectValue>input {
+    max-width: 18px;
+}
+
+.selectValue>* {
+    margin-right: 5px;
+}
