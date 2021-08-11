@@ -63,7 +63,7 @@ const ByIngredients = () => {
                     <button  type="button" onClick={() => handleAdd()}>
                         <img className='addBtn' src={add} alt="add" />
                     </button>
-                    <Link to={`/ByIngredientsSearch/${concat}`}><img className='loupe' src={loupe} alt="loupe" /></Link>
+                    <Link to={`/ByIngredients/search/${concat}`}><img className='loupe' src={loupe} alt="loupe" /></Link>
                 </div>
                 <div className='searchBtn'>
                 </div>

@@ -41,7 +41,7 @@ const ByIngredientsSearch = ({match}) => {
                     results.map((result) => {
                         return(
                             <div className="mainCardIngredients">
-                                <Link to ={`/ByIngredientsResult/${result.id}`} key={uuidv4()}>
+                                <Link to ={`/RecipeDetails/${result.id}`} key={uuidv4()}>
                                     <div className='cardIngredients' >
                                         <h2>{result.title}</h2>
                                         <img className="imgCard" src={result.image} alt="recipe" />
