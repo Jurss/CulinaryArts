@@ -7,11 +7,15 @@ import { API_KEY } from '../constantes';
 
 const ByNutrimentsSearch = ({match}) => {
     const [results, setResult] = useState([]);
+    const [resultsLenght, setResultLenght] = useState(true)
 
     function getResults(){
         const url = 'https://api.spoonacular.com/recipes/findByNutrients?min'+match.params.label+'='+match.params.min+'&max'+match.params.label+'='+match.params.max+'&number=5&apiKey='+API_KEY;
         axios.get(url).then((response) => {
             setResult(response.data)
+            if(results.length === 0){
+                setResultLenght(false)
+            }
         })
     }
     console.log(results)
@@ -24,23 +28,31 @@ const ByNutrimentsSearch = ({match}) => {
     }
     CallApi();
     return (
-        <div className='resultIngredients'>
-        {results.length !== 0 &&
-            results.map((result) => {
-                return(
-                    <div className="mainCardIngredients">
-                        <Link to ={`/RecipeDetails/${result.id}`} key={uuidv4()}>
-                            <div className='cardIngredients' >
-                                <h2>{result.title}</h2>
-                                <img className="imgCard" src={result.image} alt="recipe" />
+        <div className={resultsLenght ? 'mainresultIngredients' : 'empty' }>
+            <div className='resultIngredients'>
+                <Link to ={`/nutriments`}>
+                    <h1>Other research ?</h1>
+                </Link>
+                {results.length !== 0 &&
+                    results.map((result) => {
+                        return(
+                            <div className="mainCardIngredients">
+                                <Link to ={`/RecipeDetails/${result.id}`} key={uuidv4()}>
+                                    <div className='cardIngredients' >
+                                        <h2>{result.title}</h2>
+                                        <img className="imgCard" src={result.image} alt="recipe" />
+                                    </div>
+                                </Link>
                             </div>
-                        </Link>
-                    </div>
-                )
-            })
-        }
-    </div>
-    )
+                        )
+                    })
+                }
+                {results.length === 0 &&
+                    <h2 className='searchNotFound'>sorry, didn't find anything</h2>    
+                }
+            </div>
+        </div>
+        )
 };
 
 export default ByNutrimentsSearch;
