@@ -9,15 +9,11 @@ import { Link } from 'react-router-dom';
 
 const ByIngredientsSearch = ({match}) => {
     const [results, setResults] = useState([]);
-    const [resultsLenght, setResultLenght] = useState(true)
 
     function getResults(){
         const url = 'https://api.spoonacular.com/recipes/findByIngredients?ingredients='+match.params.search+'&number=20&ranking=1&ignorePantry=true&apiKey='+API_KEY;
         axios.get(url).then((response) => {
             setResults(response.data)
-            if(results.length === 0){
-                setResultLenght(false)
-            }
         })
     }
 
@@ -41,7 +37,7 @@ const ByIngredientsSearch = ({match}) => {
                             <div className={style.mainCardIngredients}>
                                 <Link to ={`/RecipeDetails/${result.id}`} key={uuidv4()}>
                                     <div className={style.cardIngredients} >
-                                        <h2>{result.title}</h2>
+                                        <h2 className={style.title}>{result.title}</h2>
                                         <img className={style.imgCard} src={result.image} alt="recipe" />
                                     </div>
                                 </Link>

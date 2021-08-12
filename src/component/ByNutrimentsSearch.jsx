@@ -8,15 +8,11 @@ import style from './CSS/byNutrimentsSearch.module.css';
 
 const ByNutrimentsSearch = ({match}) => {
     const [results, setResult] = useState([]);
-    const [resultsLenght, setResultLenght] = useState(true)
 
     function getResults(){
         const url = 'https://api.spoonacular.com/recipes/findByNutrients?min'+match.params.label+'='+match.params.min+'&max'+match.params.label+'='+match.params.max+'&number=30&apiKey='+API_KEY;
         axios.get(url).then((response) => {
             setResult(response.data)
-            if(results.length === 0){
-                setResultLenght(false)
-            }
         })
     }
 
@@ -39,7 +35,7 @@ const ByNutrimentsSearch = ({match}) => {
                             
                                 <div className={style.cardIngredients} >
                                     <Link to ={`/RecipeDetails/${result.id}`} key={uuidv4()}>
-                                        <h2>{result.title}</h2>
+                                        <h2 className={style.title}>{result.title}</h2>
                                         <img className={style.imgCard} src={result.image} alt="recipe" />
                                     </Link>
                                 </div>
