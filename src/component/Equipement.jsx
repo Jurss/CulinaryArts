@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import {API_KEY} from '../constantes';
 import { v4 as uuidv4 } from 'uuid';
-import './CSS/equipement.css';
+import style from './CSS/equipement.module.css';
 
 const Equipement = ({id}) => {
     const [equipement, setEquipement] = useState([]);
@@ -25,8 +25,8 @@ const Equipement = ({id}) => {
             <>
                 {equipement.map((result) => {
                     return(
-                        <div className="equipementCard" key={uuidv4()}>
-                            <img className="img" src={'https://spoonacular.com/cdn/equipment_100x100/'+result.image} alt="" />
+                        <div className={style.equipementCard} key={uuidv4()}>
+                            <img className={style.img} src={'https://spoonacular.com/cdn/equipment_100x100/'+result.image} alt="" />
                         <p><strong>{result.name}</strong></p>
                     </div>
                     )

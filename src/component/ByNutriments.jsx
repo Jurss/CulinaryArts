@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Select from 'react-select';
 import loupe from '../img/loupe.svg';
-import './CSS/byNutriments.css';
+import style from './CSS/byNutriments.module.css';
 
 const Nutriments = () => {
     const [selectedOption, setSelectedOption] = useState(null);
@@ -50,12 +50,12 @@ const Nutriments = () => {
         setSelectedOption(e);
         setParams({...params, label: e.value})
     }
-    console.log(params);
     return (
-        <div  className="mainContainer">
-            <h1 className='title'>Select min/max nutriments value you would per recipe</h1>
+        <div  className={style.mainContainer}>
+            <h1>Select min/max nutriments value you would per recipe</h1>
             <div className="selectContainer">
                 <Select
+                className={style.selectContainer}
                     placeholder='--Select Option--'
                     value={selectedOption}
                     options={data}
@@ -64,15 +64,15 @@ const Nutriments = () => {
                 </div>
             {selectedOption && (
                 <div>
-                    <div className='selectValue'>
+                    <div className={style.selectValue}>
                         <label for='min'>Min:</label>
                         <input type="text" name='min' id='min' placeholder='0' onChange={e => setParams({...params, min: e.target.value})}/>
                         <p>g and</p>
                         <label for='max'>Max:</label>
                         <input type="text" name='max' id='max' placeholder='0' onChange={e => setParams({...params, max: e.target.value})}/>g
                     </div>
-                    <div className="goSearch">
-                    <Link to={`/nutriments/search/${params.label}/${params.min}/${params.max}`}><img className='loupe' src={loupe} alt="loupe" /></Link>
+                    <div className={style.goSearch}>
+                    <Link className={style.link} to={`/nutriments/search/${params.label}/${params.min}/${params.max}`}><img className={style.loupe} src={loupe} alt="loupe" /></Link>
                     </div>
                 </div>
       )}

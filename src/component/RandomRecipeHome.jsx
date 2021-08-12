@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import {API_KEY} from '../constantes';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import './CSS/RanomRecipe.css';
+import style from './CSS/randomRecipe.module.css';
 
 const RandomRecipe = () => {
 
@@ -19,33 +19,32 @@ const RandomRecipe = () => {
         getRandomRecipe();
     }
 
-
     return (
-        <div  className="mainRandomContainer">
-            <div className="randomTitle">
+        <div  className={style.mainRandomContainer}>
+            <div className={style.randomTitle}>
                 <h2>Looking for inspiration?</h2>
             </div>
-            <div className="randomCardContainer">
+            <div className={style.randomCardContainer}>
                 {results.map((result) => {
                     return(
-                    <div className="randomCardSep" key={uuidv4()}>
-                        <div className="randomCard">
-                            <img className="randomImg" src={result.image} alt="product" />
+                    <div className={style.randomCardSep} key={uuidv4()}>
+                        <div className={style.randomCard}>
+                            <img className={style.randomImg} src={result.image} alt="product" />
                             <h3>{result.title}</h3>
                         </div>
-                        <div className="randomCarBottom">
+                        <div className={style.randomCarBottom}>
                             <h3>Ingredients:</h3>
-                                <ul className="resultIngredients">
+                                <ul className={style.resultIngredients}>
                                     {result.extendedIngredients.slice(0, 5).map((resultI) => {
                                         return(
-                                            <li key={uuidv4()}><img className="imgIngredients" src={'https://spoonacular.com/cdn/ingredients_100x100/'+resultI.image} alt="ingredient" /></li>
+                                            <li key={uuidv4()}><img className={style.imgIngredients} src={'https://spoonacular.com/cdn/ingredients_100x100/'+resultI.image} alt="ingredient" /></li>
                                         )
                                     })}
                                     <li>And more</li>
                                 </ul>
                         </div>
                         <Link to={`/randomrecipe/${result.id}`}>
-                            <button className="viewRecipe">View Recipe</button>
+                            <button className={style.viewRecipe}>View Recipe</button>
                         </Link>
                     </div>
                     )

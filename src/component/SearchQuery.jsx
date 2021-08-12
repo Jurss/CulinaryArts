@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import Loupe from '../img/loupe.svg';
-import './CSS/searchQuery.css';
+import style from './CSS/searchQuery.module.css';
 
 
 const SearchQuery = () => {
@@ -12,10 +12,10 @@ const SearchQuery = () => {
     };
 
     return (
-        <div className="form">
-            <input className="inputForm" onChange={handleChange} type="text" placeholder="Search"/>
+        <div className={style.form}>
+            <input className={style.inputForm} onChange={handleChange} type="text" placeholder="Search"/>
             <Link to={`/search/${query}`}>
-                <button className="buttonForm" id="myBtn" type="submit"><img className="loupe" src={Loupe} alt="" /></button>
+                <button className={style.buttonForm} id="myBtn" type="submit"><img className={style.loupe} src={Loupe} alt="" /></button>
             </Link>
         </div> 
     )

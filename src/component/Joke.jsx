@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import {API_KEY} from '../constantes';
 import { useState } from 'react';
-import './CSS/joke.css';
+import style from './CSS/joke.module.css';
 
 const Joke = () => {
     const [joke, setJoke] = useState([]);
@@ -18,8 +18,8 @@ const Joke = () => {
         getJoke();
     }
     return (
-        <div className="joke">
-            <h2 className="jokeTitle">A little joke ?</h2>
+        <div className={style.joke}>
+            <h2 className={style.jokeTitle}>A little joke ?</h2>
             <p>{joke}</p>
         </div>
     )

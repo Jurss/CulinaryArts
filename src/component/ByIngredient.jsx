@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
-import './CSS/byIngredients.css';
+import style from './CSS/byIngredients.module.css';
 import add from '../img/add.png';
 import loupe from '../img/loupe.svg';
 import remove from '../img/remove.png';
@@ -14,7 +14,6 @@ const ByIngredients = () => {
       values[i].value = event.target.value;
       setFields(values);
     }
-    console.log(fields)
   
     function handleAdd() {
       const values = [...fields];
@@ -28,7 +27,6 @@ const ByIngredients = () => {
       setFields(values);
     }
     function concatFields(){
-        console.log(fields)
         let str = '';
         fields.map((item) => {
             str += item.value + ',+';
@@ -41,31 +39,31 @@ const ByIngredients = () => {
     },[fields])
 
     return (
-        <div className='mainContainer'>
-            <h1 className='title'>What ingredients do you have ?</h1>
-            <div className='searchConatiner'>
+        <div className={style.mainContainerIngredients}>
+            <h1 className={style.title}>What ingredients do you have ?</h1>
+            <div className={style.searchConatiner}>
                 <h3>Add Ingredients</h3>
                 {fields.map((field, idx) => {
                     return (
-                    <div className='searchCard' key={`${field}-${idx}`}>
+                    <div className={style.searchCard} key={`${field}-${idx}`}>
                         <input
                         type="text"
                         placeholder="Ingredients"
                         onChange={e => handleChange(idx, e)}
                         />
-                        <button type="button" onClick={() => handleRemove(idx)}>
-                        <img className='removeBtn' src={remove} alt="remove" />
+                        <button className={style.buttonForm} type="button" onClick={() => handleRemove(idx)}>
+                        <img className={style.removeBtn} src={remove} alt="remove" />
                         </button>
                     </div>
                     );
                 })}
-                <div className="addBtnContainer">
-                    <button  type="button" onClick={() => handleAdd()}>
-                        <img className='addBtn' src={add} alt="add" />
+                <div className={style.addBtnContainer}>
+                    <button className={style.buttonForm} type="button" onClick={() => handleAdd()}>
+                        <img className={style.addBtn} src={add} alt="add" />
                     </button>
-                    <Link to={`/ByIngredients/search/${concat}`}><img className='loupe' src={loupe} alt="loupe" /></Link>
+                    <Link to={`/ByIngredients/search/${concat}`}><img className={style.loupe} src={loupe} alt="loupe" /></Link>
                 </div>
-                <div className='searchBtn'>
+                <div className={style.searchBtn}>
                 </div>
                 
             </div>

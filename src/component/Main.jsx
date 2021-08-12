@@ -1,18 +1,16 @@
 import React from 'react';
-import './CSS/main.css';
+import styles from './CSS/main.module.css';
 import Joke from './Joke';
-import RandomRecipe from './RandomRecipe';
-import './CSS/main.css'
+import RandomRecipeHome from './RandomRecipeHome';
 import SearchQuery from './SearchQuery';
 
 const Main = () => {
-
     return (
-            <div className="mainContainer">
-                <SearchQuery />
-                        <Joke />
-                        <RandomRecipe />
-            </div>
+        <div className={styles.mainContainer}>
+            <SearchQuery />
+            <Joke />
+            <RandomRecipeHome />
+        </div>
     )
 }
 

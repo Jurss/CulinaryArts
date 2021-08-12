@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {API_KEY} from '../constantes';
-import './CSS/similarRecipe.css'
+import style from './CSS/similarRecipe.module.css'
 import GetPhoto from './GetPhoto';
 
 const SimilarRecipe = ({id}) => {
@@ -25,7 +25,7 @@ const SimilarRecipe = ({id}) => {
     return (
         <>
             <h2>More similar recipes?</h2>
-            <div className="similarCard">
+            <div className={style.similarCard}>
                 {similarRecipe.map((result) => {
                     return(
                         <div key={result.id}>

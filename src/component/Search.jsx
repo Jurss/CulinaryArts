@@ -3,9 +3,8 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import {API_KEY} from '../constantes';
-import './CSS/search.css';
+import style from './CSS/search.module.css';
 import SearchQuery from './SearchQuery';
-import './CSS/search.css';
 
 const Search = ({match}) => {
     const [results, setResult] = useState([]);
@@ -22,16 +21,16 @@ const Search = ({match}) => {
     }, [])
 
     return (
-        <div className="searchContainer">
+        <div className={style.searchContainer}>
             <SearchQuery />
-            <div className="cardContainer">
+            <div className={style.cardContainer}>
             {results.map((result) => {
                 return(
-                        <div className='card'>
+                        <div className={style.card}>
                             <Link to={`/RecipeDetails/${result.id}`}>
                                 <div>
                                     <h2>{result.title}</h2>
-                                    <img className="imgCard" src={result.image} alt="recipe" />
+                                    <img className={style.imgCard} src={result.image} alt="recipe" />
                                 </div>
                             </Link>
                         </div>

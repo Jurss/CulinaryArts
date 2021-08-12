@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import {API_KEY} from '../constantes';
 import { v4 as uuidv4 } from 'uuid';
-import './CSS/instructions.css';
+import style from './CSS/instructions.module.css';
 
 const Instructions = ({id}) => {
     const [instructions, setInstructions] = useState([]);
@@ -28,10 +28,10 @@ const Instructions = ({id}) => {
                 <h2>Preparation</h2>
                 {instructions.map((result) => {
                     return(
-                        <div className="stepsCardContainer" key={uuidv4()}>
+                        <div className={style.stepsCardContainer} key={uuidv4()}>
                             {result.steps.map((result2) => {
                                 return(
-                                    <div className="stepsCard" key={uuidv4()}>
+                                    <div className={style.stepsCard} key={uuidv4()}>
                                         <h4>Steps {result2.number}</h4>
                                         <p>{result2.step}</p>
                                     </div>
