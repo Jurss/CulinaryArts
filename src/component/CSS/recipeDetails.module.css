@@ -1,0 +1,136 @@
+.img {
+    height: 80px;
+    width: 80px;
+}
+
+.recipeImg {
+    margin-top: 15px;
+    width: 500px;
+    height: 350px;
+}
+
+.mainContainer {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 55px;
+}
+
+.recipeDetails {
+    background: white;
+    border-radius: 18px;
+    padding-top: 15px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    justify-self: center;
+    align-self: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+.activeOnglet {
+    margin-top: 25px;
+    display: flex;
+    width: 50%;
+    height: 45px;
+    justify-content: space-between;
+    background: #EFEFEF;
+    border-radius: 18px;
+    font-size: 24px;
+}
+
+.activeOnglet>li {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 50%;
+    height: 80%;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.activeTabs {
+    color: rgb(247, 135, 44);
+    background: #FFFFFF;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.tabs {
+    color: gray;
+    cursor: pointer;
+}
+
+.detailCard>p {
+    margin-top: 5px;
+}
+
+.displayInformations {
+    margin-top: 15px;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.displayInformationsItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.displayInformationsItem>p {
+    margin-left: 8px;
+}
+
+.desactiveContenu {
+    display: none;
+}
+
+.ingredientsCardContainer {
+    margin-top: 35px;
+    margin-bottom: 45px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.equipementCardContainer {
+    margin-top: 35px;
+    margin-bottom: 45px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.stepContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.similarCardContainer {
+    background: #FFFFFF;
+    width: 80%;
+    margin: 55px auto;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

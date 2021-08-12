@@ -1,0 +1,44 @@
+.mainContainer {
+    background: #F8F8FA;
+    width: 70%;
+    height: 100%;
+    padding-bottom: 25px;
+    margin: 25px auto;
+    border-radius: 18px;
+}
+
+h1 {
+    margin-left: 15px;
+    margin-bottom: 35px;
+    width: 50vw;
+}
+
+.resultIngredients {
+    margin-top: 55px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mainCardIngredients {
+    width: 33%;
+}
+
+.cardIngredients {
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 350px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.searchNotFound {
+    background: #F3F3F3;
+    margin-top: 25px;
+    margin-left: 25px;
+}

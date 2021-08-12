@@ -1,0 +1,21 @@
+.mainErrorContainer {
+    width: 100%;
+    height: 100vh;
+    background: #F8F8FA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: rgb(119, 73, 119);
+}
+
+.description {
+    color: rgb(247, 135, 44);
+}
+
+.mainContainer>img {
+    margin-top: 50px;
+}

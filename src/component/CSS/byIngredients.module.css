@@ -1,0 +1,59 @@
+.mainContainerIngredients {
+    background: #F8F8FA;
+    width: 70%;
+    height: 85vh;
+    padding-bottom: 25px;
+    margin: 25px auto;
+    border-radius: 18px;
+}
+
+.title {
+    margin-left: 5%;
+    margin-top: 55px;
+    color: #FB9400;
+}
+
+.searchConatiner {
+    margin-top: 55px;
+    margin-left: 7%;
+    width: 20%;
+}
+
+.searchCard {
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+.addBtnContainer {
+    float: right;
+    display: flex;
+}
+
+.buttonForm {
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.removeBtn {
+    max-height: 18px;
+    max-width: 18px;
+}
+
+.addBtn {
+    cursor: pointer;
+}
+
+.searchBtn {
+    margin-top: 40px;
+    float: right;
+}
+
+.loupe {
+    max-width: 32px;
+    max-height: 32px;
+    cursor: pointer;
+}

@@ -1,0 +1,42 @@
+.mainContainer {
+    background: #F8F8FA;
+    width: 70%;
+    height: 85vh;
+    padding-bottom: 25px;
+    margin: 25px auto;
+    border-radius: 18px;
+}
+
+.selectContainer {
+    width: 30%;
+    margin-top: 35px;
+    margin-left: 35px;
+}
+
+.selectValue {
+    display: flex;
+    margin-left: 35px;
+    margin-top: 15px;
+}
+
+.selectValue>input {
+    max-width: 18px;
+}
+
+.selectValue>* {
+    margin-right: 5px;
+}
+
+.goSearch {
+    width: 30%;
+}
+
+.goSearch>* {
+    margin-left: 100%;
+}
+
+.loupe {
+    max-width: 32px;
+    max-height: 32px;
+    cursor: pointer;
+}
