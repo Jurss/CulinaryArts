@@ -29,7 +29,9 @@ const ByIngredients = () => {
     function concatFields(){
         let str = '';
         fields.map((item) => {
-            str += item.value + ',+';
+            return(
+                str += item.value + ',+'
+            )
         })
         let count = str.length - 2;
         setConcat(str.slice(0, count))
