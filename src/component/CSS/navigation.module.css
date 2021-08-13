@@ -41,6 +41,10 @@
     font-size: 1.7rem;
 }
 
+.navItem>* {
+    margin-top: 15px;
+}
+
 .navItem>p {
     margin-left: 16px;
 }
@@ -61,13 +65,104 @@
     max-height: 400px;
 }
 
+.menu,
+.close {
+    display: none;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    position: relative;
+}
+
+.pDisplayOff {
+    display: none;
+}
+
+.cheatSmallScreen {
+    width: 100%;
+    width: 40px;
+}
+
+.navConatinerSmallScreen {
+    height: 100vh;
+    width: 40px;
+    background: #fff;
+    position: fixed;
+}
+
+.imgMenu {
+    width: 20px;
+    height: 20px;
+}
+
 .test {
     position: fixed;
 }
 
-@media screen and (max-height: 735px) {
+.test>* {
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 1437px) {
+    .nameContainer {
+        font-size: 24px;
+    }
+    .navItem>p {
+        font-size: 24px;
+    }
     .fork {
         max-height: 300px;
+    }
+}
+
+@media screen and (max-width: 1143px) {
+    .nameContainer {
+        font-size: 20px;
+    }
+    .navItem>p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 939px) {
+    .nameContainer {
+        font-size: 16px;
+    }
+    .navItem>p {
+        font-size: 16px;
+    }
+    .fork {
+        max-height: 220px;
+    }
+}
+
+@media screen and (max-width: 757px) {
+    .nameContainer {
+        font-size: 14px;
+    }
+    .navItem>p {
+        font-size: 14px;
+    }
+    .fork {
+        max-height: 180px;
+    }
+    .cheat {
+        width: 140px;
+    }
+    .navContainer {
+        width: 140px;
+    }
+}
+
+@media screen and (max-width: 409px) {
+    .menu,
+    .close {
+        display: block;
+        float: right;
     }
 }
 
