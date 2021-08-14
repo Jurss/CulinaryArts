@@ -23,7 +23,54 @@
     cursor: pointer;
 }
 
+.title {
+    color: rgb(247, 135, 44);
+}
+
 .imgCard {
-    max-height: 231px;
-    max-width: 312px;
+    max-height: 310px;
+    max-width: 310px;
+}
+
+@media screen and (max-width: 1010px) {
+    .card {
+        width: 300px;
+    }
+    .imgCard {
+        max-height: 280px;
+        max-width: 280px;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    .searchContainer {
+        margin-left: 5%;
+    }
+    .card {
+        width: 260px;
+    }
+    .imgCard {
+        max-height: 240px;
+        max-width: 240px;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    .card {
+        width: 210px;
+    }
+    .imgCard {
+        max-height: 190px;
+        max-width: 190px;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    .card {
+        width: 195px;
+    }
+    .imgCard {
+        max-height: 175px;
+        max-width: 175px;
+    }
 }

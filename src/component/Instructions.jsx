@@ -25,7 +25,7 @@ const Instructions = ({id}) => {
     if(instructions.length !== 0){
         return (
             <>
-                <h2>Preparation</h2>
+                <h2 className={style.preparation}>Preparation</h2>
                 {instructions.map((result) => {
                     return(
                         <div className={style.stepsCardContainer} key={uuidv4()}>

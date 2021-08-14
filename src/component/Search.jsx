@@ -29,7 +29,7 @@ const Search = ({match}) => {
                         <div className={style.card}>
                             <Link to={`/RecipeDetails/${result.id}`}>
                                 <div>
-                                    <h2>{result.title}</h2>
+                                    <h2 className={style.title}>{result.title}</h2>
                                     <img className={style.imgCard} src={result.image} alt="recipe" />
                                 </div>
                             </Link>

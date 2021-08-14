@@ -14,14 +14,35 @@
     margin-bottom: 45px;
 }
 
-.joke>h2 {
+.jokeTitle {
     margin-left: 5%;
     color: white;
     font-size: 24px;
 }
 
-.joke>p {
+.jokeParagraph {
     font-size: 20px;
     margin-top: 2%;
     margin-left: 5%;
+}
+
+@media screen and (max-width: 800px) {
+    .joke {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .jokeTitle {
+        font-size: 18px;
+    }
+    .jokeParagraph {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .joke {
+        height: 180px;
+    }
 }

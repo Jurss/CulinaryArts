@@ -41,7 +41,7 @@ const RecipeDetails = ({match}) => {
     return ( 
         <div className={style.mainContainer}>
             <div className={style.recipeDetails}>
-                <h1>{title}</h1>
+                <h1 className={style.titleRecipe}>{title}</h1>
                 <img className={style.recipeImg} src={img} alt="preview" />
                 <div className={style.displayInformations}>
                     <div className={style.displayInformationsItem}>

@@ -7,21 +7,14 @@
     border-radius: 18px;
 }
 
-h1 {
-    margin-left: 15px;
-    margin-bottom: 35px;
-    width: 50vw;
-}
-
 .resultIngredients {
-    margin-top: 55px;
-    width: 100%;
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.mainCardIngredients {
-    width: 33%;
+h1 {
+    color: rgb(119, 73, 119);
 }
 
 .cardIngredients {
@@ -37,8 +30,60 @@ h1 {
     cursor: pointer;
 }
 
-.searchNotFound {
-    background: #F3F3F3;
-    margin-top: 25px;
-    margin-left: 25px;
+.title {
+    color: rgb(247, 135, 44);
+}
+
+.imgCard {
+    max-height: 310px;
+    max-width: 310px;
+}
+
+@media screen and (max-width: 1080px) {
+    .cardIngredients {
+        width: 320px;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .cardIngredients {
+        width: 300px;
+    }
+    .imgCard {
+        max-height: 280px;
+        max-width: 280px;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    .mainContainer {
+        margin-left: 5%;
+    }
+    .cardIngredients {
+        width: 260px;
+    }
+    .imgCard {
+        max-height: 240px;
+        max-width: 240px;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    .cardIngredients {
+        width: 210px;
+    }
+    .imgCard {
+        max-height: 190px;
+        max-width: 190px;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    .cardIngredients {
+        width: 195px;
+    }
+    .imgCard {
+        max-height: 175px;
+        max-width: 175px;
+    }
 }

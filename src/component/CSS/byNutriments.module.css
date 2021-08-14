@@ -7,6 +7,10 @@
     border-radius: 18px;
 }
 
+.title {
+    color: rgb(247, 135, 44);
+}
+
 .selectContainer {
     width: 30%;
     margin-top: 35px;
@@ -15,12 +19,26 @@
 
 .selectValue {
     display: flex;
+    flex-direction: column;
+    float: left;
+    align-items: center;
     margin-left: 35px;
     margin-top: 15px;
 }
 
-.selectValue>input {
+.inputContainer {
+    display: flex;
+    align-items: center;
+}
+
+.inputContainer>p {
+    margin-left: 5px;
+}
+
+.input {
     max-width: 18px;
+    height: 25px;
+    margin-left: 5px;
 }
 
 .selectValue>* {
@@ -39,4 +57,43 @@
     max-width: 32px;
     max-height: 32px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 885px) {
+    .selectContainer {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .selectContainer {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .selectContainer {
+        width: 85%;
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .title {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 185px) {
+    .title {
+        font-size: 21px;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -o-hyphens: auto;
+        hyphens: auto;
+    }
+    .inputContainer {
+        font-size: 12px;
+    }
 }

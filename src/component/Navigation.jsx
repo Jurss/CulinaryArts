@@ -5,15 +5,12 @@ import MenuIcon from '../img/menu.svg';
 import Random from '../img/random.svg';
 import Nutriment from '../img/nutriments.svg';
 import Bulbe from '../img/bulbe.svg'
-import Fork from '../img/fork.png';
 import burger from '../img/menu.png';
 import close from '../img/close.png';
 import { useState } from 'react';
 
 const Navigation = () => {
     const [displayMenu, setDisplayMenu] = useState(true);//Sidebar menu for responsive
-
-    console.log(displayMenu)
 
     return (
         <div className={displayMenu ? `${style.cheat}` : `${style.cheatSmallScreen}`}>
@@ -45,7 +42,6 @@ const Navigation = () => {
             <button className={displayMenu ? `${style.pDisplayOff}` : `${style.menu}`} onClick={() => setDisplayMenu(true)}><img className={style.imgMenu} src={burger} alt="menu" /></button>
             <button className={displayMenu ? `${style.close}` : `${style.pDisplayOff}`} onClick={() => setDisplayMenu(false)}><img className={style.imgMenu} src={close} alt="close" /></button>
         </div>
-        <img className={displayMenu ? `${style.fork}` : `${style.pDisplayOff}`} src={Fork} alt="fork" />
         </div>
     )
 };

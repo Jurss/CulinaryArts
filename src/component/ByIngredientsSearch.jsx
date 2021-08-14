@@ -24,7 +24,6 @@ const ByIngredientsSearch = ({match}) => {
         return <div></div>
     }
     CallApi();
-
     return (
         <div className={style.mainresultIngredients} >
             <Link to ={`/byIngredients`}>
@@ -34,8 +33,8 @@ const ByIngredientsSearch = ({match}) => {
                 {results.length !== 0 &&
                     results.map((result) => {
                         return(
-                            <div className={style.mainCardIngredients}>
-                                <Link to ={`/RecipeDetails/${result.id}`} key={uuidv4()}>
+                            <div key={uuidv4()} className={style.mainCardIngredients}>
+                                <Link to ={`/RecipeDetails/${result.id}`}>
                                     <div className={style.cardIngredients} >
                                         <h2 className={style.title}>{result.title}</h2>
                                         <img className={style.imgCard} src={result.image} alt="recipe" />

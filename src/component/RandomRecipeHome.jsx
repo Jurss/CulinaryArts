@@ -30,7 +30,7 @@ const RandomRecipe = () => {
                     <div className={style.randomCardSep} key={uuidv4()}>
                         <div className={style.randomCard}>
                             <img className={style.randomImg} src={result.image} alt="product" />
-                            <h3>{result.title}</h3>
+                            <h3 className={style.randomCardTitle}>{result.title}</h3>
                         </div>
                         <div className={style.randomCarBottom}>
                             <h3>Ingredients:</h3>

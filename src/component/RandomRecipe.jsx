@@ -33,7 +33,7 @@ const RandomRecipe = () => {
                             <h3>{result.title}</h3>
                         </div>
                         <div className={style.randomCarBottom}>
-                            <h3>Ingredients:</h3>
+                            <h3 className={style.ingredients}>Ingredients:</h3>
                                 <ul className={style.resultIngredients}>
                                     {result.extendedIngredients.slice(0, 5).map((resultI) => {
                                         return(

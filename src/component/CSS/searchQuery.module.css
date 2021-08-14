@@ -39,3 +39,10 @@
     max-height: 32px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 500px) {
+    .form {
+        margin-left: 15px;
+        width: 85%;
+    }
+}

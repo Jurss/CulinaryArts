@@ -25,30 +25,28 @@ const ByNutrimentsSearch = ({match}) => {
     CallApi();
     return (
         <div className={style.mainContainer}>
+            <Link to ={`/nutriments`}>
+                <h1>Other research ?</h1>
+            </Link>
             <div className={style.resultIngredients}>
-                <Link to ={`/nutriments`}>
-                    <h1>Other research ?</h1>
-                </Link>
                 {results.length !== 0 &&
                     results.map((result) => {
                         return(
-                            
                                 <div className={style.cardIngredients} >
                                     <Link to ={`/RecipeDetails/${result.id}`} key={uuidv4()}>
                                         <h2 className={style.title}>{result.title}</h2>
                                         <img className={style.imgCard} src={result.image} alt="recipe" />
                                     </Link>
                                 </div>
-                            
                         )
                     })
                 }
-                {results.length === 0 &&
-                    <h2 className={style.searchNotFound}>sorry, didn't find anything</h2>    
-                }
             </div>
+            {results.length === 0 &&
+                <h2 className={style.searchNotFound}>sorry, didn't find anything</h2>    
+            }
         </div>
-        )
+    )
 };
 
 export default ByNutrimentsSearch;

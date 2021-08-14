@@ -49,6 +49,7 @@ const ByIngredients = () => {
                     return (
                     <div className={style.searchCard} key={`${field}-${idx}`}>
                         <input
+                        className={style.input}
                         type="text"
                         placeholder="Ingredients"
                         onChange={e => handleChange(idx, e)}

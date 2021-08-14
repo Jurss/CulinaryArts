@@ -16,3 +16,29 @@
     height: 80px;
     width: 80px;
 }
+
+@media screen and (max-width: 1230px) {
+    .equipementCard {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .img {
+        border-radius: 18px;
+        height: 60px;
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .equipementCard {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .equipementCard {
+        width: 75%;
+    }
+}

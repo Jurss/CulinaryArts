@@ -52,7 +52,7 @@ const Nutriments = () => {
     }
     return (
         <div  className={style.mainContainer}>
-            <h1>Select min/max nutriments value you would per recipe</h1>
+            <h1 className={style.title}>Select min/max nutriments value you would per recipe</h1>
             <div className="selectContainer">
                 <Select
                 className={style.selectContainer}
@@ -65,11 +65,17 @@ const Nutriments = () => {
             {selectedOption && (
                 <div>
                     <div className={style.selectValue}>
-                        <label for='min'>Min:</label>
-                        <input type="text" name='min' id='min' placeholder='0' onChange={e => setParams({...params, min: e.target.value})}/>
-                        <p>g and</p>
-                        <label for='max'>Max:</label>
-                        <input type="text" name='max' id='max' placeholder='0' onChange={e => setParams({...params, max: e.target.value})}/>g
+                        <div className={style.inputContainer}>
+                            <label for='min'>Min: </label>
+                            <input className={style.input} type="text" name='min' id='min' placeholder='0' onChange={e => setParams({...params, min: e.target.value})}/>
+                            <p>g</p>
+                        </div>
+                        <p>and</p>
+                        <div className={style.inputContainer}>
+                            <label for='max'>Max: </label>
+                            <input className={style.input} type="text" name='max' id='max' placeholder='0' onChange={e => setParams({...params, max: e.target.value})}/>
+                            <p>g</p>
+                        </div>
                     </div>
                     <div className={style.goSearch}>
                     <Link className={style.link} to={`/nutriments/search/${params.label}/${params.min}/${params.max}`}><img className={style.loupe} src={loupe} alt="loupe" /></Link>

@@ -20,7 +20,7 @@ const Joke = () => {
     return (
         <div className={style.joke}>
             <h2 className={style.jokeTitle}>A little joke ?</h2>
-            <p>{joke}</p>
+            <p className={style.jokeParagraph}>{joke}</p>
         </div>
     )
 };

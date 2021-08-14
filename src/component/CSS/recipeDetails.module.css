@@ -13,6 +13,7 @@
     width: 100%;
     height: 100%;
     margin-bottom: 55px;
+    margin-top: 35px;
 }
 
 .recipeDetails {
@@ -27,9 +28,9 @@
     align-items: center;
 }
 
-h1 {
-    justify-self: center;
-    align-self: center;
+.titleRecipe {
+    display: flex;
+    justify-content: center;
 }
 
 li {
@@ -133,4 +134,80 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 1035px) {
+    .ingredientsCardContainer {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .ingredientsCardContainer {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 835px) {
+    .recipeImg {
+        width: 350px;
+        height: 250px;
+    }
+    .activeOnglet {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .recipeDetails {
+        width: 95%;
+    }
+    .recipeImg {
+        width: 270px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .recipeImg {
+        width: 250px;
+        height: 190px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .recipeImg {
+        width: 210px;
+        height: 160px;
+    }
+}
+
+@media screen and (max-width: 655px) {
+    .activeOnglet {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .activeOnglet {
+        font-size: 16px;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 240px) {
+    .activeOnglet {
+        margin-left: 15%;
+        flex-direction: column;
+        width: 60%;
+    }
+    .activeTabs {
+        background: none;
+    }
+}
+
+@media screen and (max-width: 215px) {
+    .displayInformations {
+        flex-direction: column;
+    }
 }

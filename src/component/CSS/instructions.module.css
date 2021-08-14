@@ -3,7 +3,27 @@
     margin-bottom: 45px;
 }
 
+.preparation {
+    color: rgb(247, 135, 44);
+}
+
 .stepsCard {
     width: 80%;
     margin-top: 10px;
+}
+
+@media screen and (max-width: 250px) {
+    .stepsCardContainer {
+        margin-left: 20%;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .preparation {
+        margin-left: 20%;
+        font-size: 22px;
+    }
+    .stepsCardContainer {
+        margin-left: 25%;
+    }
 }
